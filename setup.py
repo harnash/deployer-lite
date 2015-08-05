@@ -9,16 +9,16 @@ with open(os.path.join(here, 'README.md'), 'rb') as f:
     long_description = f.read().decode('utf-8')
 
 setup(
-    name='deployer_lite',
+    name='deployer-lite-core',
     version='0.0.1',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-    url='https://github.com/harnash/deployer-lite',
+    url='https://github.com/harnash/deployer-lite-core',
     license='Apache 2.0',
     author='Łukasz Harasimowicz',
     author_email='dev@harnash.eu',
     description='',
     long_description=long_description,
-    test_suite = 'nose.collector',
+    test_suite='nose.collector',
     classifiers=[
         'Development Status :: 3 - Alpha',
 
@@ -38,18 +38,11 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    entry_points={
-        'console_scripts': [
-            'deployer-server = server.commands:register',
-        ],
-    },
     tests_require=[
         'nose==1.3.7',
         'coverage==4.0b1',
     ],
     install_requires=[
         'pyzmq==14.7.0',
-        'click==4.1',
-        'pep3143daemon==0.0.6',
     ]
 )
