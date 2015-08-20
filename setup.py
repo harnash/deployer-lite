@@ -44,5 +44,7 @@ setup(
     ],
     install_requires=[
         'pyzmq==14.7.0',
+        'layered-yaml-attrdict-config==15.5.2',
+        'deployer-lite-core',
     ]
 )
